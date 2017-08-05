@@ -10,7 +10,7 @@
       </params>
       <attribs/>
    </obj>
-   <patcher type="patch/patcher" uuid="1cd4354c-82fc-4f2d-b35b-df7a38a3da1b" name="patcher_1" x="70" y="28">
+   <patcher type="patch/patcher" uuid="1b11b472-2e6b-415f-9002-fe80d0ba679b" name="patcher_1" x="70" y="28">
       <params>
          <frac32.s.map name="adsr1:a" MidiCC="3" value="-64.0">
             <presets>
@@ -26,7 +26,7 @@
                </preset>
             </presets>
          </frac32.s.map>
-         <frac32.u.map name="adsr1:s" value="16.5">
+         <frac32.u.map name="adsr1:s" value="43.5">
             <presets>
                <preset index="1">
                   <f v="16.5"/>
@@ -150,9 +150,10 @@
          <combo attributeName="poly" selection="8"/>
       </attribs>
       <subpatch appVersion="1.0.12">
-         <comment type="patch/comment" x="56" y="112" text="adsr modulator1"/>
-         <comment type="patch/comment" x="182" y="112" text="adsr modulator2"/>
-         <comment type="patch/comment" x="308" y="112" text="adsr gain"/>
+         <obj type="gpio/out/led1" uuid="c6679540460d64e2e71760e61cb82fac227e2764" name="led1_1" x="210" y="98">
+            <params/>
+            <attribs/>
+         </obj>
          <obj type="midi/in/keyb" uuid="53b04874696932f38aceaa168bd5d9efb743716d" name="keyb_1" x="56" y="140">
             <params/>
             <attribs/>
@@ -387,6 +388,7 @@
                <dest obj="adsr3" inlet="gate"/>
                <dest obj="adsr1" inlet="gate"/>
                <dest obj="*_1" inlet="a"/>
+               <dest obj="led1_1" inlet="in"/>
             </net>
             <net>
                <source obj="adsr2" outlet="env"/>
@@ -462,10 +464,10 @@
          </settings>
          <notes><![CDATA[]]></notes>
          <windowPos>
-            <x>1366</x>
-            <y>18</y>
-            <width>1266</width>
-            <height>1422</height>
+            <x>195</x>
+            <y>392</y>
+            <width>1171</width>
+            <height>376</height>
          </windowPos>
       </subpatch>
    </patcher>
@@ -533,9 +535,9 @@
    </settings>
    <notes><![CDATA[]]></notes>
    <windowPos>
-      <x>2632</x>
+      <x>195</x>
       <y>18</y>
-      <width>1294</width>
-      <height>1422</height>
+      <width>1171</width>
+      <height>374</height>
    </windowPos>
 </patch-1.0>

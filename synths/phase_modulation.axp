@@ -1,0 +1,541 @@
+<patch-1.0 appVersion="1.0.12">
+   <obj type="cpwitz/delay/tape-delay" uuid="571d093a-baef-4ea5-9916-6154eebf29d3" name="obj_1" x="336" y="14">
+      <params>
+         <frac32.u.map name="rate" value="48.5"/>
+         <bool32.tgl name="saturation on" value="0"/>
+         <bool32.tgl name="filter on" value="1"/>
+         <frac32.u.map name="feedback-buffer" value="59.0"/>
+         <frac32.s.map name="filter" value="30.0"/>
+         <frac32.u.map name="dry/wet" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <patcher type="patch/patcher" uuid="1cd4354c-82fc-4f2d-b35b-df7a38a3da1b" name="patcher_1" x="70" y="28">
+      <params>
+         <frac32.s.map name="adsr1:a" MidiCC="3" value="-64.0">
+            <presets>
+               <preset index="1">
+                  <f v="44.0"/>
+               </preset>
+            </presets>
+         </frac32.s.map>
+         <frac32.s.map name="adsr1:d" value="-27.0">
+            <presets>
+               <preset index="1">
+                  <f v="-27.0"/>
+               </preset>
+            </presets>
+         </frac32.s.map>
+         <frac32.u.map name="adsr1:s" value="16.5">
+            <presets>
+               <preset index="1">
+                  <f v="16.5"/>
+               </preset>
+            </presets>
+         </frac32.u.map>
+         <frac32.s.map name="adsr1:r" MidiCC="28" value="-64.0">
+            <presets>
+               <preset index="1">
+                  <f v="63.99999952316284"/>
+               </preset>
+            </presets>
+         </frac32.s.map>
+         <frac32.s.map name="adsr2:a" MidiCC="13" value="-64.0">
+            <presets>
+               <preset index="1">
+                  <f v="-64.0"/>
+               </preset>
+            </presets>
+         </frac32.s.map>
+         <frac32.s.map name="adsr2:d" value="-19.0">
+            <presets>
+               <preset index="1">
+                  <f v="20.0"/>
+               </preset>
+            </presets>
+         </frac32.s.map>
+         <frac32.u.map name="adsr2:s" value="42.5">
+            <presets>
+               <preset index="1">
+                  <f v="42.5"/>
+               </preset>
+            </presets>
+         </frac32.u.map>
+         <frac32.s.map name="adsr2:r" MidiCC="29" value="-64.0">
+            <presets>
+               <preset index="1">
+                  <f v="32.0"/>
+               </preset>
+            </presets>
+         </frac32.s.map>
+         <frac32.s.map name="adsr3:a" MidiCC="12" value="-64.0">
+            <presets>
+               <preset index="1">
+                  <f v="-64.0"/>
+               </preset>
+            </presets>
+         </frac32.s.map>
+         <frac32.s.map name="adsr3:d" value="32.0">
+            <presets>
+               <preset index="1">
+                  <f v="32.0"/>
+               </preset>
+            </presets>
+         </frac32.s.map>
+         <frac32.u.map name="adsr3:s" value="12.0">
+            <presets>
+               <preset index="1">
+                  <f v="12.0"/>
+               </preset>
+            </presets>
+         </frac32.u.map>
+         <frac32.s.map name="adsr3:r" MidiCC="30" value="33.0">
+            <presets>
+               <preset index="1">
+                  <f v="-41.0"/>
+               </preset>
+            </presets>
+         </frac32.s.map>
+         <frac32.s.map name="mod1" MidiCC="17" value="15.0">
+            <presets>
+               <preset index="1">
+                  <f v="20.0"/>
+               </preset>
+            </presets>
+         </frac32.s.map>
+         <frac32.s.map name="mod2" MidiCC="19" value="18.0">
+            <presets>
+               <preset index="1">
+                  <f v="8.0"/>
+               </preset>
+            </presets>
+         </frac32.s.map>
+         <frac32.s.map name="carrier1" MidiCC="22" value="0.0">
+            <presets>
+               <preset index="1">
+                  <f v="0.0"/>
+               </preset>
+            </presets>
+         </frac32.s.map>
+         <frac32.u.map name="mix_1:gain1" MidiCC="15" value="17.0">
+            <presets>
+               <preset index="1">
+                  <f v="58.5"/>
+               </preset>
+            </presets>
+         </frac32.u.map>
+         <frac32.u.map name="mix_1:gain2" MidiCC="16" value="12.0">
+            <presets>
+               <preset index="1">
+                  <f v="27.0"/>
+               </preset>
+            </presets>
+         </frac32.u.map>
+         <frac32.u.map name="mix_1:gain3" MidiCC="23" value="29.5">
+            <presets>
+               <preset index="1">
+                  <f v="0.0"/>
+               </preset>
+            </presets>
+         </frac32.u.map>
+         <frac32.s.map name="freesine" MidiCC="21" value="-11.0">
+            <presets>
+               <preset index="1">
+                  <f v="-1.0"/>
+               </preset>
+            </presets>
+         </frac32.s.map>
+      </params>
+      <attribs>
+         <combo attributeName="poly" selection="8"/>
+      </attribs>
+      <subpatch appVersion="1.0.12">
+         <comment type="patch/comment" x="56" y="112" text="adsr modulator1"/>
+         <comment type="patch/comment" x="182" y="112" text="adsr modulator2"/>
+         <comment type="patch/comment" x="308" y="112" text="adsr gain"/>
+         <obj type="midi/in/keyb" uuid="53b04874696932f38aceaa168bd5d9efb743716d" name="keyb_1" x="56" y="140">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="env/adsr" uuid="d1dbcc5fa6f87b98a6a91c87fd44acee5e690bac" name="adsr1" x="350" y="140">
+            <params>
+               <frac32.s.map name="a" onParent="true" value="-38.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="53.0"/>
+                     </preset>
+                     <preset index="2">
+                        <f v="-64.0"/>
+                     </preset>
+                  </presets>
+               </frac32.s.map>
+               <frac32.s.map name="d" onParent="true" value="10.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="-13.0"/>
+                     </preset>
+                     <preset index="2">
+                        <f v="-13.0"/>
+                     </preset>
+                  </presets>
+               </frac32.s.map>
+               <frac32.u.map name="s" onParent="true" value="16.5">
+                  <presets>
+                     <preset index="1">
+                        <f v="16.5"/>
+                     </preset>
+                     <preset index="2">
+                        <f v="16.5"/>
+                     </preset>
+                  </presets>
+               </frac32.u.map>
+               <frac32.s.map name="r" onParent="true" value="-26.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="56.0"/>
+                     </preset>
+                     <preset index="2">
+                        <f v="-36.0"/>
+                     </preset>
+                  </presets>
+               </frac32.s.map>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="env/adsr" uuid="d1dbcc5fa6f87b98a6a91c87fd44acee5e690bac" name="adsr2" x="476" y="140">
+            <params>
+               <frac32.s.map name="a" onParent="true" value="-32.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="39.0"/>
+                     </preset>
+                  </presets>
+               </frac32.s.map>
+               <frac32.s.map name="d" onParent="true" value="24.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="-38.0"/>
+                     </preset>
+                  </presets>
+               </frac32.s.map>
+               <frac32.u.map name="s" onParent="true" value="42.5">
+                  <presets>
+                     <preset index="1">
+                        <f v="0.0"/>
+                     </preset>
+                  </presets>
+               </frac32.u.map>
+               <frac32.s.map name="r" onParent="true" value="8.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="-8.0"/>
+                     </preset>
+                  </presets>
+               </frac32.s.map>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="env/adsr" uuid="d1dbcc5fa6f87b98a6a91c87fd44acee5e690bac" name="adsr3" x="602" y="140">
+            <params>
+               <frac32.s.map name="a" onParent="true" value="63.99999952316284">
+                  <presets>
+                     <preset index="1">
+                        <f v="63.99999952316284"/>
+                     </preset>
+                  </presets>
+               </frac32.s.map>
+               <frac32.s.map name="d" onParent="true" value="64.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="12.0"/>
+                     </preset>
+                  </presets>
+               </frac32.s.map>
+               <frac32.u.map name="s" onParent="true" value="12.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="33.0"/>
+                     </preset>
+                  </presets>
+               </frac32.u.map>
+               <frac32.s.map name="r" onParent="true" value="35.99999952316284">
+                  <presets>
+                     <preset index="1">
+                        <f v="63.99999952316284"/>
+                     </preset>
+                  </presets>
+               </frac32.s.map>
+            </params>
+            <attribs/>
+         </obj>
+         <comment type="patch/comment" x="56" y="336" text="modulator1"/>
+         <obj type="osc/sine" uuid="6e094045cca76a9dbf7ebfa72e44e4700d2b3ba" name="mod1" x="56" y="350">
+            <params>
+               <frac32.s.map name="pitch" onParent="true" value="6.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="3.0"/>
+                     </preset>
+                     <preset index="2">
+                        <f v="15.0"/>
+                     </preset>
+                  </presets>
+               </frac32.s.map>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_1" x="196" y="392">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="math/*" uuid="922423f2db9f222aa3e5ba095778288c446da47a" name="*_1" x="588" y="420">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_3" x="980" y="434">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet a" uuid="abd8c5fd3b0524a6630f65cad6dc27f6c58e2a3e" name="outlet_1" x="1092" y="434">
+            <params/>
+            <attribs/>
+         </obj>
+         <comment type="patch/comment" x="56" y="490" text="modulator2"/>
+         <obj type="osc/sine" uuid="6e094045cca76a9dbf7ebfa72e44e4700d2b3ba" name="mod2" x="56" y="504">
+            <params>
+               <frac32.s.map name="pitch" onParent="true" value="-18.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="8.0"/>
+                     </preset>
+                     <preset index="2">
+                        <f v="-10.0"/>
+                     </preset>
+                  </presets>
+               </frac32.s.map>
+            </params>
+            <attribs/>
+         </obj>
+         <comment type="patch/comment" x="532" y="504" text="modulator mixer"/>
+         <comment type="patch/comment" x="728" y="504" text="carrier"/>
+         <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_2" x="196" y="532">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="osc/sine" uuid="6e094045cca76a9dbf7ebfa72e44e4700d2b3ba" name="carrier1" x="728" y="532">
+            <params>
+               <frac32.s.map name="pitch" onParent="true" value="-37.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="-16.0"/>
+                     </preset>
+                  </presets>
+               </frac32.s.map>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="mix/mix 3 g" uuid="efc0bdb8ca0ec2184330951eff5203ff487e35a9" name="mix_1" x="392" y="588">
+            <params>
+               <frac32.u.map name="gain1" onParent="true" value="28.999999523162842">
+                  <presets>
+                     <preset index="1">
+                        <f v="48.5"/>
+                     </preset>
+                  </presets>
+               </frac32.u.map>
+               <frac32.u.map name="gain2" onParent="true" value="33.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="37.5"/>
+                     </preset>
+                  </presets>
+               </frac32.u.map>
+               <frac32.u.map name="gain3" onParent="true" value="33.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="17.0"/>
+                     </preset>
+                  </presets>
+               </frac32.u.map>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_4" x="602" y="602">
+            <params/>
+            <attribs/>
+         </obj>
+         <comment type="patch/comment" x="56" y="644" text="free running modulator"/>
+         <obj type="osc/sine" uuid="6e094045cca76a9dbf7ebfa72e44e4700d2b3ba" name="freesine" x="56" y="658">
+            <params>
+               <frac32.s.map name="pitch" onParent="true" value="-37.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="-14.0"/>
+                     </preset>
+                     <preset index="2">
+                        <f v="-43.0"/>
+                     </preset>
+                  </presets>
+               </frac32.s.map>
+            </params>
+            <attribs/>
+         </obj>
+         <nets>
+            <net>
+               <source obj="keyb_1" outlet="gate"/>
+               <dest obj="adsr2" inlet="gate"/>
+               <dest obj="adsr3" inlet="gate"/>
+               <dest obj="adsr1" inlet="gate"/>
+               <dest obj="*_1" inlet="a"/>
+            </net>
+            <net>
+               <source obj="adsr2" outlet="env"/>
+               <dest obj="vca_2" inlet="v"/>
+            </net>
+            <net>
+               <source obj="adsr3" outlet="env"/>
+               <dest obj="vca_3" inlet="v"/>
+            </net>
+            <net>
+               <source obj="keyb_1" outlet="note"/>
+               <dest obj="mod1" inlet="pitch"/>
+               <dest obj="mod2" inlet="pitch"/>
+               <dest obj="carrier1" inlet="pitch"/>
+               <dest obj="freesine" inlet="pitch"/>
+            </net>
+            <net>
+               <source obj="carrier1" outlet="wave"/>
+               <dest obj="vca_3" inlet="a"/>
+            </net>
+            <net>
+               <source obj="adsr1" outlet="env"/>
+               <dest obj="vca_1" inlet="v"/>
+            </net>
+            <net>
+               <source obj="mod1" outlet="wave"/>
+               <dest obj="vca_1" inlet="a"/>
+            </net>
+            <net>
+               <source obj="mod2" outlet="wave"/>
+               <dest obj="vca_2" inlet="a"/>
+            </net>
+            <net>
+               <source obj="freesine" outlet="wave"/>
+               <dest obj="mix_1" inlet="in3"/>
+            </net>
+            <net>
+               <source obj="vca_1" outlet="o"/>
+               <dest obj="mod2" inlet="phase"/>
+            </net>
+            <net>
+               <source obj="vca_2" outlet="o"/>
+               <dest obj="mix_1" inlet="in1"/>
+            </net>
+            <net>
+               <source obj="vca_3" outlet="o"/>
+               <dest obj="outlet_1" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="mix_1" outlet="out"/>
+               <dest obj="vca_4" inlet="a"/>
+            </net>
+            <net>
+               <source obj="vca_4" outlet="o"/>
+               <dest obj="carrier1" inlet="phase"/>
+            </net>
+            <net>
+               <source obj="keyb_1" outlet="velocity"/>
+               <dest obj="*_1" inlet="b"/>
+            </net>
+            <net>
+               <source obj="*_1" outlet="result"/>
+               <dest obj="vca_4" inlet="v"/>
+            </net>
+         </nets>
+         <settings>
+            <subpatchmode>polyphonic</subpatchmode>
+            <MidiChannel>1</MidiChannel>
+            <NPresets>8</NPresets>
+            <NPresetEntries>32</NPresetEntries>
+            <NModulationSources>8</NModulationSources>
+            <NModulationTargetsPerSource>8</NModulationTargetsPerSource>
+         </settings>
+         <notes><![CDATA[]]></notes>
+         <windowPos>
+            <x>1366</x>
+            <y>18</y>
+            <width>1266</width>
+            <height>1422</height>
+         </windowPos>
+      </subpatch>
+   </patcher>
+   <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out_1" x="728" y="42">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="TSG/fx/reverb" uuid="dfdb5c9d-572c-4ab2-9803-f3b26f51ae5d" name="obj_2" x="490" y="56">
+      <params>
+         <frac32.u.map name="PreDelay" value="39.0"/>
+         <frac32.u.map name="decay" value="29.5"/>
+         <frac32.u.map name="LowDamp" value="38.0"/>
+         <frac32.u.map name="HighDamp" value="0.0"/>
+         <frac32.u.map name="size" value="36.0"/>
+         <frac32.s.map name="mod_:pitch" value="21.0"/>
+         <frac32.u.map name="mod_:gain" value="0.0"/>
+         <frac32.u.map name="diffusion" value="14.5"/>
+         <frac32.u.map name="mix" value="10.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="math/*c" uuid="7a66f52a9594e7e9eb31328ea725cb3641a80b55" name="*c_1" x="294" y="294">
+      <params>
+         <frac32.u.map name="amp" MidiCC="5" value="9.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/scope 128 b" uuid="2b69f51a714fc276503ef10c349d6d253d1ae5e2" name="scope_1" x="350" y="504">
+      <params/>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="patcher_1" outlet="outlet_1"/>
+         <dest obj="*c_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="obj_1" outlet="outlet_1"/>
+         <dest obj="obj_2" inlet="InL"/>
+         <dest obj="obj_2" inlet="InR"/>
+      </net>
+      <net>
+         <source obj="*c_1" outlet="out"/>
+         <dest obj="scope_1" inlet="in"/>
+         <dest obj="obj_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="obj_2" outlet="l"/>
+         <dest obj="out_1" inlet="left"/>
+      </net>
+      <net>
+         <source obj="obj_2" outlet="r"/>
+         <dest obj="out_1" inlet="right"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+      <MidiChannel>1</MidiChannel>
+      <NPresets>8</NPresets>
+      <NPresetEntries>32</NPresetEntries>
+      <NModulationSources>8</NModulationSources>
+      <NModulationTargetsPerSource>8</NModulationTargetsPerSource>
+      <Author>MartijnVerhallen</Author>
+      <Attributions>fm</Attributions>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>2632</x>
+      <y>18</y>
+      <width>1294</width>
+      <height>1422</height>
+   </windowPos>
+</patch-1.0>

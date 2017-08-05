@@ -1,0 +1,348 @@
+<patch-1.0 appVersion="1.0.12">
+   <obj type="logic/counter" uuid="7a141ba82230e54e5f5cd12da5dbe5a74ba854a5" name="counter_1" x="154" y="28">
+      <params>
+         <int32 name="maximum" value="16"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="lfo/square" uuid="de6909eb64db13af5b43f979a4c130024b3a4793" name="square_1" x="28" y="42">
+      <params>
+         <frac32.s.map name="pitch" value="11.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 16" uuid="302bfed4cde8894229679ce81f6b8a5c5212dd98" name="ibar_2" x="266" y="42">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out_1" x="1022" y="42">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="mix/mix 2 g" uuid="221f038da51943034a75e442c90624fcebfe6112" name="mix_1" x="588" y="98">
+      <params>
+         <frac32.u.map name="gain1" value="50.0"/>
+         <frac32.u.map name="gain2" value="59.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="math/muls 2" uuid="c3083089dc169cd87133000659a02789dec5a151" name="muls_1" x="756" y="98">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/scope 128 b trig" uuid="11747dcd1dc9afe4919f537c861fb18b80b4e4e" name="scope_1" x="364" y="126">
+      <params/>
+      <attribs/>
+   </obj>
+   <patcher type="patch/patcher" uuid="6af25ef4-875a-491c-9044-3c4c580485e6" name="synth" x="238" y="168">
+      <params/>
+      <attribs/>
+      <subpatch appVersion="1.0.12">
+         <obj type="filter/vcf" uuid="2b0aad6aeb06cc86c5802d2f167e9f281d8c35e1" name="vcf_2" x="630" y="70">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet i" uuid="f11927f00c59219df0c50f73056aa19f125540b7" name="inlet_1" x="154" y="98">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="sel/sel fp 16" uuid="3d0698411643c13e342d17c8750d68d01689c658" name="select_f_16b_1" x="294" y="98">
+            <params>
+               <frac32.u.mapvsl name="b0" value="0.0"/>
+               <frac32.u.mapvsl name="b1" value="4.0"/>
+               <frac32.u.mapvsl name="b2" value="9.0"/>
+               <frac32.u.mapvsl name="b3" value="12.0"/>
+               <frac32.u.mapvsl name="b4" value="19.5"/>
+               <frac32.u.mapvsl name="b5" value="6.0"/>
+               <frac32.u.mapvsl name="b6" value="0.0"/>
+               <frac32.u.mapvsl name="b7" value="40.0"/>
+               <frac32.u.mapvsl name="b8" value="6.0"/>
+               <frac32.u.mapvsl name="b9" value="11.5"/>
+               <frac32.u.mapvsl name="b10" value="9.5"/>
+               <frac32.u.mapvsl name="b11" value="0.0"/>
+               <frac32.u.mapvsl name="b12" value="0.0"/>
+               <frac32.u.mapvsl name="b13" value="7.0"/>
+               <frac32.u.mapvsl name="b14" value="10.0"/>
+               <frac32.u.mapvsl name="b15" value="3.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="math/smooth" uuid="6c5d08c282bb08bff24af85b4891447f99bcbc97" name="smooth_1" x="532" y="140">
+            <params>
+               <frac32.u.map name="time" value="0.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet a" uuid="abd8c5fd3b0524a6630f65cad6dc27f6c58e2a3e" name="outlet_1" x="798" y="140">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="osc/brds/saw" uuid="ed06f020-7e68-4db6-836a-95a85e200cfb" name="saw_1" x="644" y="154">
+            <params>
+               <frac32.s.map name="pitch" value="0.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="filter/vcf" uuid="2b0aad6aeb06cc86c5802d2f167e9f281d8c35e1" name="vcf_1" x="784" y="238">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="sel/sel fp 16" uuid="3d0698411643c13e342d17c8750d68d01689c658" name="vcf freq" x="294" y="280">
+            <params>
+               <frac32.u.mapvsl name="b0" value="0.0"/>
+               <frac32.u.mapvsl name="b1" value="14.5"/>
+               <frac32.u.mapvsl name="b2" value="11.0"/>
+               <frac32.u.mapvsl name="b3" value="12.0"/>
+               <frac32.u.mapvsl name="b4" value="16.0"/>
+               <frac32.u.mapvsl name="b5" value="7.5"/>
+               <frac32.u.mapvsl name="b6" value="5.5"/>
+               <frac32.u.mapvsl name="b7" value="18.0"/>
+               <frac32.u.mapvsl name="b8" value="5.5"/>
+               <frac32.u.mapvsl name="b9" value="2.0"/>
+               <frac32.u.mapvsl name="b10" value="9.5"/>
+               <frac32.u.mapvsl name="b11" value="8.0"/>
+               <frac32.u.mapvsl name="b12" value="0.0"/>
+               <frac32.u.mapvsl name="b13" value="3.0"/>
+               <frac32.u.mapvsl name="b14" value="11.5"/>
+               <frac32.u.mapvsl name="b15" value="3.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="sel/sel fp 16" uuid="3d0698411643c13e342d17c8750d68d01689c658" name="vcfc res" x="490" y="280">
+            <params>
+               <frac32.u.mapvsl name="b0" value="0.0"/>
+               <frac32.u.mapvsl name="b1" value="14.5"/>
+               <frac32.u.mapvsl name="b2" value="12.0"/>
+               <frac32.u.mapvsl name="b3" value="17.5"/>
+               <frac32.u.mapvsl name="b4" value="19.5"/>
+               <frac32.u.mapvsl name="b5" value="12.0"/>
+               <frac32.u.mapvsl name="b6" value="17.5"/>
+               <frac32.u.mapvsl name="b7" value="5.5"/>
+               <frac32.u.mapvsl name="b8" value="6.0"/>
+               <frac32.u.mapvsl name="b9" value="24.0"/>
+               <frac32.u.mapvsl name="b10" value="9.5"/>
+               <frac32.u.mapvsl name="b11" value="0.0"/>
+               <frac32.u.mapvsl name="b12" value="50.0"/>
+               <frac32.u.mapvsl name="b13" value="3.0"/>
+               <frac32.u.mapvsl name="b14" value="22.0"/>
+               <frac32.u.mapvsl name="b15" value="3.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <nets>
+            <net>
+               <source obj="select_f_16b_1" outlet="o"/>
+               <dest obj="smooth_1" inlet="in"/>
+            </net>
+            <net>
+               <source obj="smooth_1" outlet="out"/>
+               <dest obj="saw_1" inlet="pitch"/>
+            </net>
+            <net>
+               <source obj="inlet_1" outlet="inlet"/>
+               <dest obj="select_f_16b_1" inlet="in"/>
+               <dest obj="vcf freq" inlet="in"/>
+               <dest obj="vcfc res" inlet="in"/>
+            </net>
+            <net>
+               <source obj="saw_1" outlet="wave"/>
+               <dest obj="vcf_1" inlet="in"/>
+            </net>
+            <net>
+               <source obj="vcf freq" outlet="o"/>
+               <dest obj="vcf_1" inlet="frequency"/>
+            </net>
+            <net>
+               <source obj="vcfc res" outlet="o"/>
+               <dest obj="vcf_1" inlet="reso"/>
+            </net>
+            <net>
+               <source obj="vcf_1" outlet="out"/>
+               <dest obj="outlet_1" inlet="outlet"/>
+            </net>
+         </nets>
+         <settings>
+            <subpatchmode>no</subpatchmode>
+         </settings>
+         <notes><![CDATA[]]></notes>
+         <windowPos>
+            <x>195</x>
+            <y>392</y>
+            <width>1171</width>
+            <height>376</height>
+         </windowPos>
+      </subpatch>
+   </patcher>
+   <patcher type="patch/patcher" uuid="34049d45-c6b2-47ef-9bf4-fb7f4e3769d1" name="drum" x="196" y="294">
+      <params/>
+      <attribs/>
+      <subpatch appVersion="1.0.12">
+         <obj type="gpio/out/led1" uuid="c6679540460d64e2e71760e61cb82fac227e2764" name="led1_1" x="546" y="154">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="gpio/out/led2" uuid="3d7a4c75d1f9901181a17ba5de752782de911803" name="led2_1" x="574" y="224">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="inlet_1" x="28" y="322">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="sel/sel b 16 4t" uuid="b7ce3d08471c34927a0cf9dbe7bbedfce0214621" name="select_bool_16_v2x4_1" x="294" y="322">
+            <params>
+               <bin16 name="p1" value="3077"/>
+               <bin16 name="p2" value="37520"/>
+               <bin16 name="p3" value="21845"/>
+               <bin16 name="p4" value="0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="mix/mix 4 g" uuid="36f472cd81da2e17bd4b4ee11b53b4c82527220c" name="mix_1" x="742" y="322">
+            <params>
+               <frac32.u.map name="gain1" value="32.0"/>
+               <frac32.u.map name="gain2" value="56.5"/>
+               <frac32.u.map name="gain3" value="42.5"/>
+               <frac32.u.map name="gain4" value="32.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="math/muls 2" uuid="c3083089dc169cd87133000659a02789dec5a151" name="muls_1" x="882" y="322">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet a" uuid="abd8c5fd3b0524a6630f65cad6dc27f6c58e2a3e" name="audio out" x="980" y="322">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="logic/counter" uuid="7a141ba82230e54e5f5cd12da5dbe5a74ba854a5" name="counter_1" x="182" y="336">
+            <params>
+               <int32 name="maximum" value="16"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="wave/flashplay" uuid="595422aa-8767-45a8-ae08-bd8ac0247c61" name="flashwaveplay~_1" x="560" y="336">
+            <params/>
+            <attribs>
+               <combo attributeName="sample" selection="808bd"/>
+            </attribs>
+         </obj>
+         <obj type="wave/flashplay" uuid="595422aa-8767-45a8-ae08-bd8ac0247c61" name="flashwaveplay~_2" x="560" y="420">
+            <params/>
+            <attribs>
+               <combo attributeName="sample" selection="808snare"/>
+            </attribs>
+         </obj>
+         <obj type="wave/flashplay" uuid="595422aa-8767-45a8-ae08-bd8ac0247c61" name="flashwaveplay~_3" x="560" y="490">
+            <params/>
+            <attribs>
+               <combo attributeName="sample" selection="808hatclose"/>
+            </attribs>
+         </obj>
+         <nets>
+            <net>
+               <source obj="counter_1" outlet="o"/>
+               <dest obj="select_bool_16_v2x4_1" inlet="in"/>
+            </net>
+            <net>
+               <source obj="select_bool_16_v2x4_1" outlet="o1"/>
+               <dest obj="flashwaveplay~_1" inlet="trig"/>
+               <dest obj="led2_1" inlet="in"/>
+            </net>
+            <net>
+               <source obj="select_bool_16_v2x4_1" outlet="o3"/>
+               <dest obj="flashwaveplay~_3" inlet="trig"/>
+            </net>
+            <net>
+               <source obj="flashwaveplay~_1" outlet="out"/>
+               <dest obj="mix_1" inlet="in1"/>
+            </net>
+            <net>
+               <source obj="flashwaveplay~_3" outlet="out"/>
+               <dest obj="mix_1" inlet="in3"/>
+            </net>
+            <net>
+               <source obj="inlet_1" outlet="inlet"/>
+               <dest obj="counter_1" inlet="trig"/>
+            </net>
+            <net>
+               <source obj="mix_1" outlet="out"/>
+               <dest obj="muls_1" inlet="in"/>
+            </net>
+            <net>
+               <source obj="muls_1" outlet="out"/>
+               <dest obj="audio out" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="flashwaveplay~_2" outlet="out"/>
+               <dest obj="mix_1" inlet="in2"/>
+            </net>
+            <net>
+               <source obj="select_bool_16_v2x4_1" outlet="o2"/>
+               <dest obj="flashwaveplay~_2" inlet="trig"/>
+               <dest obj="led1_1" inlet="in"/>
+            </net>
+         </nets>
+         <settings>
+            <subpatchmode>no</subpatchmode>
+         </settings>
+         <notes><![CDATA[]]></notes>
+         <windowPos>
+            <x>145</x>
+            <y>136</y>
+            <width>1189</width>
+            <height>633</height>
+         </windowPos>
+      </subpatch>
+   </patcher>
+   <obj type="disp/scope 128 b trig" uuid="11747dcd1dc9afe4919f537c861fb18b80b4e4e" name="scope_2" x="378" y="350">
+      <params/>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="square_1" outlet="wave"/>
+         <dest obj="counter_1" inlet="trig"/>
+         <dest obj="drum" inlet="inlet_1"/>
+      </net>
+      <net>
+         <source obj="counter_1" outlet="o"/>
+         <dest obj="ibar_2" inlet="in"/>
+         <dest obj="synth" inlet="inlet_1"/>
+      </net>
+      <net>
+         <source obj="drum" outlet="audio out"/>
+         <dest obj="mix_1" inlet="in2"/>
+         <dest obj="scope_2" inlet="in"/>
+      </net>
+      <net>
+         <source obj="synth" outlet="outlet_1"/>
+         <dest obj="mix_1" inlet="in1"/>
+         <dest obj="scope_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="mix_1" outlet="out"/>
+         <dest obj="muls_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="muls_1" outlet="out"/>
+         <dest obj="out_1" inlet="left"/>
+         <dest obj="out_1" inlet="right"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>normal</subpatchmode>
+      <MidiChannel>1</MidiChannel>
+      <NPresets>8</NPresets>
+      <NPresetEntries>32</NPresetEntries>
+      <NModulationSources>8</NModulationSources>
+      <NModulationTargetsPerSource>8</NModulationTargetsPerSource>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>195</x>
+      <y>18</y>
+      <width>1171</width>
+      <height>374</height>
+   </windowPos>
+</patch-1.0>
